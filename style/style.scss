@@ -1,0 +1,131 @@
+@import url("http://fonts.cdnfonts.com/css/product-sans");
+@mixin btn {
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.7rem 1.7em;
+  border-radius: 0.25rem;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 73, 27, 1) 0%,
+    rgba(241, 47, 63, 1) 50%,
+    rgba(220, 24, 96, 1) 100%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  overflow-x: hidden;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 1) 0%,
+    rgba(29, 28, 28, 0.5) 50%,
+    rgba(224, 91, 91, 0) 100%
+  );
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    letter-spacing: 0.07rem;
+
+    .logo {
+      //   flex: 0 auto;
+      padding: 0 25px 0 0;
+
+      svg {
+        fill: white;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      list-style: none;
+      font-weight: bold;
+      flex: auto 1;
+
+      li {
+        padding: 0 16px 0 0;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        .about {
+          padding: 0 16px 0 0;
+        }
+
+        .games {
+          color: rgb(50%, 50%, 50%);
+        }
+      }
+    }
+
+    .signin-btn {
+      @include btn;
+    }
+  }
+}
+
+main {
+  .landing {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    min-width: 100vw;
+    height: 100vh;
+  }
+
+  .landing-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+
+    h3 {
+      font-size: 2.5rem;
+      letter-spacing: 0.07rem;
+    }
+
+    .sub-h {
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: 0.07rem;
+    }
+
+    .try {
+      @include btn;
+      margin: 20px 0;
+      padding: 0.9rem 2em;
+    }
+
+    .tnc a {
+      color: white;
+    }
+  }
+}

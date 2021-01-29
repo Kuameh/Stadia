@@ -1,0 +1,105 @@
+@import url("http://fonts.cdnfonts.com/css/product-sans");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  overflow-x: hidden;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: linear-gradient(180deg, #000001 0%, rgba(29, 28, 28, 0.5) 50%, rgba(224, 91, 91, 0) 100%);
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  letter-spacing: 0.07rem;
+}
+header nav .logo {
+  padding: 0 25px 0 0;
+}
+header nav .logo svg {
+  fill: white;
+}
+header nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  font-weight: bold;
+  flex: auto 1;
+}
+header nav ul li {
+  padding: 0 16px 0 0;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+header nav ul li .about {
+  padding: 0 16px 0 0;
+}
+header nav ul li .games {
+  color: gray;
+}
+header nav .signin-btn {
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.7rem 1.7em;
+  border-radius: 0.25rem;
+  background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
+}
+
+main .landing {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  min-width: 100vw;
+  height: 100vh;
+}
+main .landing-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90vh;
+}
+main .landing-txt h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.07rem;
+}
+main .landing-txt .sub-h {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.07rem;
+}
+main .landing-txt .try {
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.7rem 1.7em;
+  border-radius: 0.25rem;
+  background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
+  margin: 20px 0;
+  padding: 0.9rem 2em;
+}
+main .landing-txt .tnc a {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
