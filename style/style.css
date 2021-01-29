@@ -1,4 +1,13 @@
 @import url("http://fonts.cdnfonts.com/css/product-sans");
+section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +18,7 @@ body {
   font-family: "Product Sans", sans-serif;
   color: white;
   overflow-x: hidden;
-  background-color: black;
+  background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -66,6 +75,9 @@ header nav .signin-btn {
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
 }
 
+main {
+  color: black;
+}
 main .landing {
   position: absolute;
   top: 0;
@@ -80,6 +92,7 @@ main .landing-txt {
   flex-direction: column;
   text-align: center;
   height: 90vh;
+  color: white;
 }
 main .landing-txt h3 {
   font-size: 2.5rem;
@@ -102,4 +115,87 @@ main .landing-txt .try {
 }
 main .landing-txt .tnc a {
   color: white;
+}
+main .sticky-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 0.5px 5px rgba(0, 0, 0, 0.2), 0 0.5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11vh;
+}
+main .sticky-nav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  letter-spacing: 0.07rem;
+  margin: 10px 0;
+}
+main .sticky-nav nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  font-weight: bold;
+  flex: auto 1;
+}
+main .sticky-nav nav ul li {
+  padding: 0 16px 0 0;
+}
+main .sticky-nav nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+main .sticky-nav nav ul li .about {
+  padding: 0 16px 0 0;
+  color: black;
+}
+main .sticky-nav nav ul li .games {
+  color: gray;
+}
+main .sticky-nav nav .logo {
+  margin: 0 16px 0 0;
+  padding: 0 16px 0 0;
+  width: 50px;
+}
+main .sticky-nav nav .try {
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.7rem 1.7em;
+  border-radius: 0.25rem;
+  background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
+  color: white;
+  margin: -1px 0 0 0;
+}
+main section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+main section div {
+  margin: 105px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main section h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.07rem;
+}
+main section p {
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 31rem;
+  margin: 20px 0 0 0;
+  color: gray;
+  letter-spacing: 0.04rem;
 }/*# sourceMappingURL=style.css.map */

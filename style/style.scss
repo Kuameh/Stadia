@@ -1,4 +1,8 @@
 @import url("http://fonts.cdnfonts.com/css/product-sans");
+
+$weight-400: 400;
+$h-gray: rgb(50%, 50%, 50%);
+
 @mixin btn {
   font-size: 0.9em;
   font-weight: bold;
@@ -12,6 +16,18 @@
     rgba(220, 24, 96, 1) 100%
   );
 }
+@mixin section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
+section {
+  @include section();
+}
 
 * {
   margin: 0;
@@ -23,7 +39,7 @@ body {
   font-family: "Product Sans", sans-serif;
   color: white;
   overflow-x: hidden;
-  background-color: black;
+  background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -91,6 +107,8 @@ header {
 }
 
 main {
+  color: black;
+
   .landing {
     position: absolute;
     top: 0;
@@ -106,6 +124,7 @@ main {
     flex-direction: column;
     text-align: center;
     height: 90vh;
+    color: white;
 
     h3 {
       font-size: 2.5rem;
@@ -126,6 +145,89 @@ main {
 
     .tnc a {
       color: white;
+    }
+  }
+
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 0.5px 5px rgba(0, 0, 0, 0.2), 0 0.5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11vh;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      letter-spacing: 0.07rem;
+      margin: 10px 0;
+
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        font-weight: bold;
+        flex: auto 1;
+
+        li {
+          padding: 0 16px 0 0;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+
+          .about {
+            padding: 0 16px 0 0;
+            color: rgb(0, 0, 0);
+          }
+
+          .games {
+            color: rgb(50%, 50%, 50%);
+          }
+        }
+      }
+
+      .logo {
+        margin: 0 16px 0 0;
+        padding: 0 16px 0 0;
+        width: 50px;
+      }
+
+      .try {
+        @include btn;
+        color: white;
+        margin: -1px 0 0 0;
+      }
+    }
+  }
+
+  section {
+    @include section;
+
+    div {
+      margin: 105px 0 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    h3 {
+      font-size: 2.5rem;
+      letter-spacing: 0.07rem;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      max-width: 31rem;
+      margin: 20px 0 0 0;
+      color: $h-gray;
+      letter-spacing: 0.04rem;
     }
   }
 }
