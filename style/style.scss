@@ -1,7 +1,7 @@
 @import url("http://fonts.cdnfonts.com/css/product-sans");
 
 $weight-400: 400;
-$h-gray: rgb(50%, 50%, 50%);
+$h-gray: $h-gray;
 
 @mixin btn {
   font-size: 0.9em;
@@ -95,7 +95,7 @@ header {
         }
 
         .games {
-          color: rgb(50%, 50%, 50%);
+          color: $h-gray;
         }
       }
     }
@@ -188,7 +188,7 @@ main {
           }
 
           .games {
-            color: rgb(50%, 50%, 50%);
+            color: $h-gray;
           }
         }
       }
