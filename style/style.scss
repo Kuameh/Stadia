@@ -1,13 +1,15 @@
 @import url("http://fonts.cdnfonts.com/css/product-sans");
 
 $weight-400: 400;
-$h-gray: $h-gray;
+$clr-gray: gray;
+$clr-dark: rgba(32, 33, 36, 1);
+$clr-dark-btn: #2a2b2e;
 
 @mixin btn {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.7rem 1.7em;
+  padding: 0.7rem 1.7rem;
   border-radius: 0.25rem;
   background: linear-gradient(
     90deg,
@@ -38,12 +40,13 @@ section {
 body {
   font-family: "Product Sans", sans-serif;
   color: white;
-  overflow-x: hidden;
+  background-image: url(https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg);
   background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
+  height: 100vh;
 }
 
 header {
@@ -95,7 +98,7 @@ header {
         }
 
         .games {
-          color: $h-gray;
+          color: $clr-gray;
         }
       }
     }
@@ -188,7 +191,7 @@ main {
           }
 
           .games {
-            color: $h-gray;
+            color: $clr-gray;
           }
         }
       }
@@ -226,7 +229,7 @@ main {
       font-weight: 400;
       max-width: 31rem;
       margin: 20px 0 0 0;
-      color: $h-gray;
+      color: $clr-gray;
       letter-spacing: 0.04rem;
     }
   }

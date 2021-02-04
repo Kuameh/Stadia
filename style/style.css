@@ -17,12 +17,12 @@ section {
 body {
   font-family: "Product Sans", sans-serif;
   color: white;
-  overflow-x: hidden;
+  background-image: url(https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg);
   background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  height: 100vh;
 }
 
 header {
@@ -67,10 +67,10 @@ header nav ul li .games {
   color: gray;
 }
 header nav .signin-btn {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.7rem 1.7em;
+  padding: 0.7rem 1.7rem;
   border-radius: 0.25rem;
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
 }
@@ -100,14 +100,14 @@ main .landing-txt h3 {
 }
 main .landing-txt .sub-h {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: 0.07rem;
 }
 main .landing-txt .try {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.7rem 1.7em;
+  padding: 0.7rem 1.7rem;
   border-radius: 0.25rem;
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
   margin: 20px 0;
@@ -163,10 +163,10 @@ main .sticky-nav nav .logo {
   width: 50px;
 }
 main .sticky-nav nav .try {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.7rem 1.7em;
+  padding: 0.7rem 1.7rem;
   border-radius: 0.25rem;
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
   color: white;
