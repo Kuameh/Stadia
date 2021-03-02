@@ -1,10 +1,20 @@
 @import url("http://fonts.cdnfonts.com/css/product-sans");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
 section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #de3334;
+}
+
+h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.07rem;
 }
 
 * {
@@ -21,6 +31,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -28,7 +39,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 15vh;
   background: linear-gradient(180deg, #000001 0%, rgba(29, 28, 28, 0.5) 50%, rgba(224, 91, 91, 0) 100%);
 }
 header nav {
@@ -74,17 +85,7 @@ header nav .signin-btn {
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
 }
 
-main {
-  color: black;
-}
-main .landing {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  min-width: 100vw;
-  height: 100vh;
-}
-main .landing-txt {
+.landing-txt {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,17 +93,18 @@ main .landing-txt {
   text-align: center;
   height: 90vh;
   color: white;
+  background: none;
 }
-main .landing-txt h3 {
+.landing-txt h3 {
   font-size: 2.5rem;
   letter-spacing: 0.07rem;
 }
-main .landing-txt .sub-h {
+.landing-txt .sub-h {
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.07rem;
 }
-main .landing-txt .try {
+.landing-txt .try {
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
@@ -112,8 +114,16 @@ main .landing-txt .try {
   margin: 20px 0;
   padding: 0.9rem 2em;
 }
-main .landing-txt .tnc a {
+.landing-txt .tnc a {
   color: white;
+}
+
+main {
+  color: black;
+  background: white;
+}
+main .landing {
+  height: 100vh;
 }
 main .sticky-nav {
   position: -webkit-sticky;
@@ -124,7 +134,7 @@ main .sticky-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15vh;
+  height: 80px;
 }
 main .sticky-nav nav {
   display: flex;
@@ -221,4 +231,111 @@ main #games p {
   color: #e4e4e4;
   margin: 90px 180px 0 180px;
   font-size: 1.2rem;
+}
+
+#stadia-pro {
+  margin: 150px 0 0 0;
+}
+#stadia-pro h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.07rem;
+}
+#stadia-pro p {
+  color: gray;
+  font-size: 1rem;
+  margin-top: 0.375rem;
+}
+#stadia-pro .pro-graphics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 0.8125rem;
+}
+#stadia-pro .pro-graphics .graphics {
+  display: flex;
+  flex-direction: column;
+  max-width: 16.625rem;
+  max-height: 14.75rem;
+}
+#stadia-pro .pro-graphics .h2 {
+  font-size: 1.25rem;
+}
+
+#insta-play {
+  margin-top: 250px;
+}
+#insta-play img {
+  margin-top: 3.5rem;
+  width: 37.5rem;
+}
+#insta-play p {
+  color: gray;
+  font-size: 1rem;
+  margin-top: 0.375rem;
+}
+
+#faqs {
+  margin-top: 10.75rem;
+  padding: 0 0 6.45rem 0;
+}
+#faqs .footnote {
+  width: 90ch;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.0125rem;
+  font-weight: 400;
+  color: gray;
+}
+#faqs .footnote p {
+  margin: 5px 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 100px;
+}
+footer .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: #2a2b2e;
+  max-width: 90vw;
+  flex: auto;
+}
+footer .foot .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+}
+footer .foot .links {
+  flex: 2 auto;
+}
+footer .foot .links ul {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  list-style: none;
+}
+footer .foot .links ul li {
+  padding: 0.75rem 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+footer .foot .social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }/*# sourceMappingURL=style.css.map */

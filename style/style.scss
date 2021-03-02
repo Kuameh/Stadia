@@ -1,9 +1,11 @@
 @import url("http://fonts.cdnfonts.com/css/product-sans");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
 
 $weight-400: 400;
 $clr-gray: gray;
 $clr-ligth: #e4e4e4;
 $clr-dark-btn: #2a2b2e;
+$clr-orange-dark: #de3334;
 
 @mixin btn {
   font-size: 0.9rem;
@@ -20,15 +22,24 @@ $clr-dark-btn: #2a2b2e;
 }
 @mixin section {
   display: flex;
-  // justify-content: flex-start;
+  // justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  // height: 100vh;
   text-align: center;
 }
 
 section {
   @include section();
+}
+
+a {
+  text-decoration: none;
+  color: $clr-orange-dark;
+}
+h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.07rem;
 }
 
 * {
@@ -45,7 +56,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -53,7 +64,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 15vh;
   background: linear-gradient(
     180deg,
     rgb(0, 0, 1) 0%,
@@ -109,46 +120,44 @@ header {
   }
 }
 
-main {
-  color: black;
+.landing-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90vh;
+  color: white;
+  background: none;
 
-  .landing {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    min-width: 100vw;
-    height: 100vh;
+  h3 {
+    font-size: 2.5rem;
+    letter-spacing: 0.07rem;
   }
 
-  .landing-txt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    height: 90vh;
+  .sub-h {
+    font-size: 1rem;
+    font-weight: $weight-400;
+    letter-spacing: 0.07rem;
+  }
+
+  .try {
+    @include btn;
+    margin: 20px 0;
+    padding: 0.9rem 2em;
+  }
+
+  .tnc a {
     color: white;
+  }
+}
 
-    h3 {
-      font-size: 2.5rem;
-      letter-spacing: 0.07rem;
-    }
+main {
+  color: black;
+  background: white;
 
-    .sub-h {
-      font-size: 1rem;
-      font-weight: $weight-400;
-      letter-spacing: 0.07rem;
-    }
-
-    .try {
-      @include btn;
-      margin: 20px 0;
-      padding: 0.9rem 2em;
-    }
-
-    .tnc a {
-      color: white;
-    }
+  .landing {
+    height: 100vh;
   }
 
   .sticky-nav {
@@ -159,7 +168,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 80px;
 
     nav {
       display: flex;
@@ -259,5 +268,122 @@ main {
     color: $clr-ligth;
     margin: 90px 180px 0 180px;
     font-size: 1.2rem;
+  }
+}
+
+#stadia-pro {
+  margin: 150px 0 0 0;
+
+  h3 {
+    font-size: 2.5rem;
+    letter-spacing: 0.07rem;
+  }
+  p {
+    color: $clr-gray;
+    font-size: 1rem;
+    margin-top: 0.375rem;
+  }
+
+  .pro-graphics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 0.8125rem;
+    .graphics {
+      display: flex;
+      flex-direction: column;
+      max-width: 16.625rem;
+      max-height: 14.75rem;
+    }
+    .h2 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+#insta-play {
+  margin-top: 250px;
+
+  img {
+    margin-top: 3.5rem;
+    width: 37.5rem;
+  }
+
+  p {
+    color: $clr-gray;
+    font-size: 1rem;
+    margin-top: 0.375rem;
+  }
+}
+
+#faqs {
+  margin-top: 10.75rem;
+  padding: 0 0 6.45rem 0;
+
+  .footnote {
+    width: 90ch;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.0125rem;
+    font-weight: 400;
+    color: $clr-gray;
+    p {
+      margin: 5px 0;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 100px;
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: $clr-dark-btn;
+    max-width: 90vw;
+    flex: auto;
+
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 50px;
+    }
+
+    .links {
+      flex: 2 auto;
+
+      ul {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: row;
+        list-style: none;
+        li {
+          padding: 0.75rem 0.75rem;
+          line-height: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
   }
 }
