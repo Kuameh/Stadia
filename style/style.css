@@ -1,7 +1,6 @@
 @import url("http://fonts.cdnfonts.com/css/product-sans");
 section {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -70,7 +69,7 @@ header nav .signin-btn {
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.7rem 1.7rem;
+  padding: 0.7em 1.7em;
   border-radius: 0.25rem;
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
 }
@@ -107,7 +106,7 @@ main .landing-txt .try {
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.7rem 1.7rem;
+  padding: 0.7em 1.7em;
   border-radius: 0.25rem;
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
   margin: 20px 0;
@@ -125,7 +124,7 @@ main .sticky-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 11vh;
+  height: 15vh;
 }
 main .sticky-nav nav {
   display: flex;
@@ -166,36 +165,60 @@ main .sticky-nav nav .try {
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.7rem 1.7rem;
+  padding: 0.7em 1.7em;
   border-radius: 0.25rem;
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
   color: white;
   margin: -1px 0 0 0;
 }
-main section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  text-align: center;
+main #games {
+  margin: 100px 0 0 0;
 }
-main section div {
-  margin: 105px 0 0 0;
+main #games s-header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-main section h3 {
+main #games h3 {
   font-size: 2.5rem;
   letter-spacing: 0.07rem;
 }
-main section p {
+main #games p {
   font-size: 1rem;
   font-weight: 400;
-  max-width: 31rem;
+  max-width: 60ch;
   margin: 20px 0 0 0;
   color: gray;
   letter-spacing: 0.04rem;
+}
+
+.p-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 0 0 0;
+  gap: 30px;
+}
+.p-flex .ch-1-flex,
+.p-flex .ch-2-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.p-flex img {
+  width: auto;
+  max-height: 250px;
+}
+.p-flex .show-all {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.7em 1.7em;
+  border-radius: 0.25rem;
+  background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
+  background: #2a2b2e;
+  color: #e4e4e4;
+  margin: 90px 180px 0 180px;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

@@ -2,14 +2,14 @@
 
 $weight-400: 400;
 $clr-gray: gray;
-$clr-dark: rgba(32, 33, 36, 1);
+$clr-ligth: #e4e4e4;
 $clr-dark-btn: #2a2b2e;
 
 @mixin btn {
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.7rem 1.7rem;
+  padding: 0.7em 1.7em;
   border-radius: 0.25rem;
   background: linear-gradient(
     90deg,
@@ -20,7 +20,7 @@ $clr-dark-btn: #2a2b2e;
 }
 @mixin section {
   display: flex;
-  justify-content: flex-start;
+  // justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -159,7 +159,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 11vh;
+    height: 15vh;
 
     nav {
       display: flex;
@@ -210,11 +210,10 @@ main {
     }
   }
 
-  section {
-    @include section;
+  #games {
+    margin: 100px 0 0 0;
 
-    div {
-      margin: 105px 0 0 0;
+    s-header {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -227,10 +226,38 @@ main {
     p {
       font-size: 1rem;
       font-weight: 400;
-      max-width: 31rem;
+      max-width: 60ch;
       margin: 20px 0 0 0;
       color: $clr-gray;
       letter-spacing: 0.04rem;
     }
+  }
+}
+
+.p-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 0 0 0;
+  gap: 30px;
+
+  .ch-1-flex,
+  .ch-2-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  img {
+    width: auto;
+    max-height: 250px;
+  }
+
+  .show-all {
+    @include btn;
+    background: $clr-dark-btn;
+    color: $clr-ligth;
+    margin: 90px 180px 0 180px;
+    font-size: 1.2rem;
   }
 }
