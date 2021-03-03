@@ -120,6 +120,9 @@ header {
   }
 }
 
+.landing {
+  height: 100vh;
+}
 .landing-txt {
   display: flex;
   justify-content: center;
@@ -155,10 +158,6 @@ header {
 main {
   color: black;
   background: white;
-
-  .landing {
-    height: 100vh;
-  }
 
   .sticky-nav {
     position: sticky;

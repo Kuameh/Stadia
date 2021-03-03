@@ -85,6 +85,10 @@ header nav .signin-btn {
   background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
 }
 
+.landing {
+  height: 100vh;
+}
+
 .landing-txt {
   display: flex;
   justify-content: center;
@@ -121,9 +125,6 @@ header nav .signin-btn {
 main {
   color: black;
   background: white;
-}
-main .landing {
-  height: 100vh;
 }
 main .sticky-nav {
   position: -webkit-sticky;
