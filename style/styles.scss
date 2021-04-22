@@ -2,10 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
 
 $weight-400: 400;
-$clr-gray: gray;
+$weight-500: 500;
+$clr-gray: #808080;
 $clr-ligth: #e4e4e4;
 $clr-dark-btn: #2a2b2e;
 $clr-orange-dark: #de3334;
+
+// :root {
+//   // width
+// ::-webkit-scrollbar {
+//   position: absolute;
+//   z-index: 1;
+//   width: 10px;
+// }
+// // Track
+// ::-webkit-scrollbar-track {
+//   display: none;
+// }
+// // Handle
+// ::-webkit-scrollbar-thumb {
+//   background: #c0c0c0;
+//   border-radius: 3px;
+//   }
+// // Handle on hover
+// ::-webkit-scrollbar-thumb:hover {
+//   background: gray;
+//   }
+// }
 
 @mixin btn {
   font-size: 0.9rem;
@@ -13,6 +36,8 @@ $clr-orange-dark: #de3334;
   text-align: center;
   padding: 0.7em 1.7em;
   border-radius: 0.25rem;
+  white-space: nowrap;
+  cursor: pointer;
   background: linear-gradient(
     90deg,
     rgba(248, 73, 27, 1) 0%,
@@ -20,17 +45,16 @@ $clr-orange-dark: #de3334;
     rgba(220, 24, 96, 1) 100%
   );
 }
-@mixin section {
+@mixin flex {
   display: flex;
-  // justify-content: center;
   align-items: center;
   flex-direction: column;
-  // height: 100vh;
-  text-align: center;
 }
 
 section {
-  @include section();
+  // @include section();
+  padding: 0 50px;
+  text-align: center;
 }
 
 a {
@@ -38,8 +62,23 @@ a {
   color: $clr-orange-dark;
 }
 h3 {
-  font-size: 2.5rem;
+  font-size: clamp(3rem, 9vw, 4rem);
   letter-spacing: 0.07rem;
+  margin: 20px;
+}
+sup,
+sub {
+  font-size: 0.7rem;
+}
+
+.about::after {
+  content: url("img/stadia/01_mobile_drop_down.png");
+  height: 50px;
+}
+
+:root {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -51,13 +90,15 @@ h3 {
 body {
   font-family: "Product Sans", sans-serif;
   color: white;
-  background-image: url(https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg);
+  background-image: url(/img/stadia/landing.jpg);
+  // background-image: url(https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg);
   background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   height: 100vh;
+  // overflow-x: hidden;
 }
 
 header {
@@ -65,6 +106,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 15vh;
+  white-space: nowrap;
   background: linear-gradient(
     180deg,
     rgb(0, 0, 1) 0%,
@@ -122,36 +164,47 @@ header {
 
 .landing {
   height: 100vh;
+  padding: 0 !important;
 }
+
 .landing-txt {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 90vh;
+  height: 75vh;
   color: white;
+  padding: 25px;
   background: none;
 
-  h3 {
-    font-size: 2.5rem;
-    letter-spacing: 0.07rem;
-  }
+  // h3 {
+  //   font-size: clamp(3rem, 9vw, 4rem);
+  //   letter-spacing: 0.07rem;
+  //   margin: 20px;
+  // }
 
   .sub-h {
     font-size: 1rem;
-    font-weight: $weight-400;
+    font-weight: bolder;
     letter-spacing: 0.07rem;
   }
 
   .try {
     @include btn;
+    font-size: 1.5rem;
     margin: 20px 0;
-    padding: 0.9rem 2em;
+    padding: 0.9rem 4rem;
+  }
+
+  .tnc {
+    max-width: 60ch;
+    font-size: clamp(1rem, 1vw, 1rem);
   }
 
   .tnc a {
     color: white;
+    text-decoration: underline;
   }
 }
 
@@ -168,6 +221,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 80px;
+    white-space: nowrap;
 
     nav {
       display: flex;
@@ -205,7 +259,7 @@ main {
       }
 
       .logo {
-        margin: 0 16px 0 0;
+        // margin: 0 16px 0 0;
         padding: 0 16px 0 0;
         width: 50px;
       }
@@ -228,14 +282,13 @@ main {
       flex-direction: column;
     }
     h3 {
-      font-size: 2.5rem;
-      letter-spacing: 0.07rem;
+      font-size: clamp(2.2rem, 5vw, 2.8rem);
     }
     p {
       font-size: 1rem;
       font-weight: 400;
       max-width: 60ch;
-      margin: 20px 0 0 0;
+      margin: 30px auto 0 auto;
       color: $clr-gray;
       letter-spacing: 0.04rem;
     }
@@ -245,20 +298,20 @@ main {
 .p-flex {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   margin: 50px 0 0 0;
-  gap: 30px;
+  gap: calc(428vw / 100);
 
   .ch-1-flex,
   .ch-2-flex {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: calc(428vw / 100);
   }
 
   img {
     width: auto;
-    max-height: 250px;
+    height: calc(50vw / 2);
   }
 
   .show-all {
@@ -274,9 +327,9 @@ main {
   margin: 150px 0 0 0;
 
   h3 {
-    font-size: 2.5rem;
-    letter-spacing: 0.07rem;
+    font-size: clamp(2rem, 9vw, 4rem);
   }
+
   p {
     color: $clr-gray;
     font-size: 1rem;
@@ -289,6 +342,11 @@ main {
     align-items: center;
     gap: 30px;
     margin-top: 0.8125rem;
+
+    img {
+      width: calc(900px / 4);
+    }
+
     .graphics {
       display: flex;
       flex-direction: column;
@@ -304,9 +362,13 @@ main {
 #insta-play {
   margin-top: 250px;
 
+  h3 {
+    font-size: clamp(2rem, 9vw, 4rem);
+  }
+
   img {
     margin-top: 3.5rem;
-    width: 37.5rem;
+    width: clamp(300px, 37.5rem, 96%);
   }
 
   p {
@@ -318,10 +380,63 @@ main {
 
 #faqs {
   margin-top: 10.75rem;
-  padding: 0 0 6.45rem 0;
+  padding: 0 50px 6.45rem 50px;
+
+  .drop-faqs {
+    text-align: left;
+    margin: 50px auto;
+    max-width: 90ch;
+
+    .faq-container {
+      border-bottom: 1px solid $clr-ligth;
+      transition: all 1s ease-in-out;
+      cursor: pointer;
+    }
+
+    .faq-head {
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-txt {
+      padding-bottom: 30px;
+      color: $clr-gray;
+      transition: all 1s ease-in-out;
+    }
+
+    .expand {
+      display: none;
+    }
+
+    .height {
+      height: 70px;
+    }
+
+    .drop-ico {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.7rem;
+      color: #de3334;
+      margin: 0 0 0 auto;
+      // padding: 20px;
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+      img {
+        width: 15px;
+      }
+    }
+
+    h4 {
+      padding: 1.5rem 0;
+      flex: 1;
+      color: $clr-dark-btn;
+    }
+  }
 
   .footnote {
-    width: 90ch;
+    max-width: 100ch;
     text-align: left;
     font-family: "Roboto", sans-serif;
     font-size: 0.875rem;
@@ -329,6 +444,8 @@ main {
     letter-spacing: 0.0125rem;
     font-weight: 400;
     color: $clr-gray;
+    margin: auto;
+
     p {
       margin: 5px 0;
     }
@@ -340,7 +457,7 @@ footer {
   justify-content: center;
   align-items: center;
   background: white;
-  height: 100px;
+  // height: 100px;
 
   .foot {
     display: flex;
@@ -348,7 +465,6 @@ footer {
     align-items: center;
     flex-direction: row;
     color: $clr-dark-btn;
-    max-width: 90vw;
     flex: auto;
 
     .left {
@@ -383,6 +499,81 @@ footer {
       align-items: center;
       justify-content: center;
       gap: 20px;
+    }
+  }
+}
+
+/* mobile view */
+
+@media screen and (max-width: 720px) {
+  @mixin btn {
+    font-size: 0.8rem !important;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  header {
+    font-size: 0.7rem;
+
+    .games {
+      display: none;
+    }
+
+    .signin-btn {
+      @include btn;
+      font-size: 0.2rem;
+    }
+  }
+
+  .landing {
+    // display: block;
+    height: 57vh;
+    .landing-txt {
+      height: auto;
+    }
+  }
+
+  main {
+    .sticky-nav {
+      font-size: 0.7rem;
+
+      .games {
+        display: none;
+      }
+    }
+
+    #stadia-pro {
+      .pro-graphics {
+        flex-direction: column;
+      }
+      .graphics {
+        margin: 50px;
+      }
+    }
+
+    .p-flex .show-all {
+      margin: 50px 0 0 0;
+    }
+  }
+
+  footer {
+    .foot {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+
+      .links ul {
+        flex-direction: column;
+
+        li {
+          padding: 0.4rem 0.25rem;
+        }
+      }
+
+      .left {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   }
 }

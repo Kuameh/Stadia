@@ -1,0 +1,442 @@
+@charset 'utf-8';
+// https://matthewelsom.com/blog/simple-scss-playbook.html
+//Vendor
+@use "vendor/_vendor-dir";
+
+//Base Styles`
+@use "base/_base-dir";
+
+//Abstracts
+@use "abstracts/_abstracts-dir";
+
+//Components
+@use "components/_components-dir";
+
+//Layout
+@use "layouts/_layouts-dir";
+
+// :root {
+//   // width
+// ::-webkit-scrollbar {
+//   position: absolute;
+//   z-index: 1;
+//   width: 10px;
+// }
+// // Track
+// ::-webkit-scrollbar-track {
+//   display: none;
+// }
+// // Handle
+// ::-webkit-scrollbar-thumb {
+//   background: #c0c0c0;
+//   border-radius: 3px;
+//   }
+// // Handle on hover
+// ::-webkit-scrollbar-thumb:hover {
+//   background: gray;
+//   }
+// }
+
+section {
+  @include section();
+}
+
+body {
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  background-image: url(/img/stadia/landing.jpg);
+  // background-image: url(https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  white-space: nowrap;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 1) 0%,
+    rgba(29, 28, 28, 0.5) 50%,
+    rgba(224, 91, 91, 0) 100%
+  );
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    letter-spacing: 0.07rem;
+
+    .logo {
+      //   flex: 0 auto;
+      padding: 0 25px 0 0;
+
+      svg {
+        fill: white;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      list-style: none;
+      font-weight: bold;
+      flex: auto 1;
+
+      li {
+        padding: 0 16px 0 0;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        .about {
+          padding: 0 16px 0 0;
+        }
+
+        .games {
+          color: $clr-gray;
+        }
+      }
+    }
+
+    .signin-btn {
+      @include btn;
+    }
+  }
+}
+
+.landing {
+  height: 100vh;
+}
+.landing-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 75vh;
+  color: white;
+  background: none;
+
+  h3 {
+    font-size: 3rem;
+    letter-spacing: 0.07rem;
+  }
+
+  .sub-h {
+    font-size: 1rem;
+    font-weight: bolder;
+    letter-spacing: 0.07rem;
+  }
+
+  .try {
+    @include btn;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    padding: 0.9rem 8rem;
+  }
+
+  .tnc {
+    width: 60ch;
+  }
+
+  .tnc a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+main {
+  color: black;
+  background: white;
+
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 0.5px 5px rgba(0, 0, 0, 0.2), 0 0.5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      letter-spacing: 0.07rem;
+      margin: 10px 0;
+
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        font-weight: bold;
+        flex: auto 1;
+
+        li {
+          padding: 0 16px 0 0;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+
+          .about {
+            padding: 0 16px 0 0;
+            color: rgb(0, 0, 0);
+          }
+
+          .games {
+            color: $clr-gray;
+          }
+        }
+      }
+
+      .logo {
+        margin: 0 16px 0 0;
+        padding: 0 16px 0 0;
+        width: 50px;
+      }
+
+      .try {
+        @include btn;
+        color: white;
+        margin: -1px 0 0 0;
+      }
+    }
+  }
+
+  #games {
+    margin: 100px 0 0 0;
+
+    s-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    h3 {
+      font-size: 2.5rem;
+      letter-spacing: 0.07rem;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      max-width: 60ch;
+      margin: 20px 0 0 0;
+      color: $clr-gray;
+      letter-spacing: 0.04rem;
+    }
+  }
+}
+
+.p-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 0 0 0;
+  gap: 30px;
+
+  .ch-1-flex,
+  .ch-2-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  img {
+    width: auto;
+    max-height: 250px;
+  }
+
+  .show-all {
+    @include btn;
+    background: $clr-dark-btn;
+    color: $clr-ligth;
+    margin: 90px 180px 0 180px;
+    font-size: 1.2rem;
+  }
+}
+
+#stadia-pro {
+  margin: 150px 0 0 0;
+
+  h3 {
+    font-size: 2.5rem;
+    letter-spacing: 0.07rem;
+  }
+  p {
+    color: $clr-gray;
+    font-size: 1rem;
+    margin-top: 0.375rem;
+  }
+
+  .pro-graphics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 0.8125rem;
+    .graphics {
+      display: flex;
+      flex-direction: column;
+      max-width: 16.625rem;
+      max-height: 14.75rem;
+    }
+    .h2 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+#insta-play {
+  margin-top: 250px;
+
+  img {
+    margin-top: 3.5rem;
+    width: 37.5rem;
+  }
+
+  p {
+    color: $clr-gray;
+    font-size: 1rem;
+    margin-top: 0.375rem;
+  }
+}
+
+#faqs {
+  margin-top: 10.75rem;
+  padding: 0 50px 6.45rem 50px;
+
+  .drop-faqs {
+    text-align: left;
+    width: 80ch;
+    margin: 50px 0;
+
+    .faq-container {
+      border-bottom: 1px solid $clr-ligth;
+      transition: all 1s ease-in-out;
+      cursor: pointer;
+    }
+
+    .faq-head {
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-txt {
+      padding-bottom: 30px;
+      color: $clr-gray;
+      transition: all 1s ease-in-out;
+    }
+
+    .expand {
+      display: none;
+    }
+
+    .height {
+      height: 70px;
+    }
+
+    .drop-ico {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.7rem;
+      color: #de3334;
+      margin: 0 0 0 auto;
+      // padding: 20px;
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+      img {
+        width: 15px;
+      }
+    }
+
+    h4 {
+      padding: 1.5rem 0;
+      flex: 1;
+    }
+  }
+
+  .footnote {
+    max-width: 90ch;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.0125rem;
+    font-weight: 400;
+    color: $clr-gray;
+    p {
+      margin: 5px 0;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 100px;
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: $clr-dark-btn;
+    max-width: 90vw;
+    flex: auto;
+
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 50px;
+    }
+
+    .links {
+      flex: 2 auto;
+
+      ul {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: row;
+        list-style: none;
+        li {
+          padding: 0.75rem 0.75rem;
+          line-height: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+}

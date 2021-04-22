@@ -1,0 +1,22 @@
+@mixin btn {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.7em 1.7em;
+  border-radius: 0.25rem;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 73, 27, 1) 0%,
+    rgba(241, 47, 63, 1) 50%,
+    rgba(220, 24, 96, 1) 100%
+  );
+}
+
+@mixin section {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // height: 100vh;
+  text-align: center;
+}

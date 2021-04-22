@@ -1,0 +1,33 @@
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in the project.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Product Sans", sans-serif;
+  color: white;
+  background-image: url(/img/stadia/landing.jpg);
+  // background-image: url(https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $clr-orange-dark;
+}
+
+li {
+  list-style: none;
+}
