@@ -27,13 +27,10 @@ faqH4.forEach(function (e, index) {
   // e.addEventListener("click", collapse(index));
 });
 
-function rotate(e) {
-  dropIco[e].style.transform = "rotate(-180deg)";
-}
-
 function collapse(classIndex) {
-  faqTxt[classIndex].classList.toggle("expand");
+  faqTxt[classIndex].classList.toggle("collapse");
   faqContainer[classIndex].classList.toggle("height");
+  dropIco[classIndex].classList.toggle("rotate");
 }
 
 // function collapse() {
@@ -43,3 +40,5 @@ function collapse(classIndex) {
 // console.log(faqH4);
 //   console.log(faqTxt);
 //   console.log(dropIco);
+
+// Materilize

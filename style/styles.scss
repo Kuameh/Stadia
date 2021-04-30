@@ -38,12 +38,7 @@ $clr-orange-dark: #de3334;
   border-radius: 0.25rem;
   white-space: nowrap;
   cursor: pointer;
-  background: linear-gradient(
-    90deg,
-    rgba(248, 73, 27, 1) 0%,
-    rgba(241, 47, 63, 1) 50%,
-    rgba(220, 24, 96, 1) 100%
-  );
+  background: linear-gradient(90deg, #f8491b 0%, #f12f3f 50%, #dc1860 100%);
 }
 @mixin flex {
   display: flex;
@@ -71,10 +66,10 @@ sub {
   font-size: 0.7rem;
 }
 
-.about::after {
-  content: url("img/stadia/01_mobile_drop_down.png");
-  height: 50px;
-}
+// .about::after {
+//   content: url("img/stadia/01_mobile_drop_down.png");
+//   height: 50px;
+// }
 
 :root {
   overflow-x: hidden;
@@ -90,8 +85,8 @@ sub {
 body {
   font-family: "Product Sans", sans-serif;
   color: white;
-  background-image: url(/img/stadia/landing.jpg);
-  // background-image: url(https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg);
+  background-image: url("/img/stadia/landing.jpg");
+  // background-image: url("https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg");
   background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -387,10 +382,16 @@ main {
     margin: 50px auto;
     max-width: 90ch;
 
+    .collapse {
+      // display: none;
+      visibility: hidden;
+    }
+
     .faq-container {
       border-bottom: 1px solid $clr-ligth;
       transition: all 1s ease-in-out;
       cursor: pointer;
+      height: 70px;
     }
 
     .faq-head {
@@ -401,15 +402,12 @@ main {
     .faq-txt {
       padding-bottom: 30px;
       color: $clr-gray;
-      transition: all 1s ease-in-out;
-    }
-
-    .expand {
-      display: none;
+      // transition: all 1s ease-in-out;
     }
 
     .height {
-      height: 70px;
+      height: auto;
+      min-height: 70px;
     }
 
     .drop-ico {
@@ -423,9 +421,14 @@ main {
       width: 70px;
       height: 70px;
       cursor: pointer;
+      transform: rotate(0deg);
+      transition: all 0.5s steps(100);
       img {
         width: 15px;
       }
+    }
+    .rotate {
+      transform: rotate(180deg);
     }
 
     h4 {
@@ -563,8 +566,6 @@ footer {
       padding: 20px;
 
       .links ul {
-        flex-direction: column;
-
         li {
           padding: 0.4rem 0.25rem;
         }

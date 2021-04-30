@@ -21,11 +21,6 @@ sub {
   font-size: 0.7rem;
 }
 
-.about::after {
-  content: url("img/stadia/01_mobile_drop_down.png");
-  height: 50px;
-}
-
 :root {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -40,7 +35,7 @@ sub {
 body {
   font-family: "Product Sans", sans-serif;
   color: white;
-  background-image: url(/img/stadia/landing.jpg);
+  background-image: url("/img/stadia/landing.jpg");
   background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -315,10 +310,14 @@ main #games p {
   margin: 50px auto;
   max-width: 90ch;
 }
+#faqs .drop-faqs .collapse {
+  visibility: hidden;
+}
 #faqs .drop-faqs .faq-container {
   border-bottom: 1px solid #e4e4e4;
   transition: all 1s ease-in-out;
   cursor: pointer;
+  height: 70px;
 }
 #faqs .drop-faqs .faq-head {
   display: flex;
@@ -327,13 +326,10 @@ main #games p {
 #faqs .drop-faqs .faq-txt {
   padding-bottom: 30px;
   color: #808080;
-  transition: all 1s ease-in-out;
-}
-#faqs .drop-faqs .expand {
-  display: none;
 }
 #faqs .drop-faqs .height {
-  height: 70px;
+  height: auto;
+  min-height: 70px;
 }
 #faqs .drop-faqs .drop-ico {
   display: flex;
@@ -345,9 +341,14 @@ main #games p {
   width: 70px;
   height: 70px;
   cursor: pointer;
+  transform: rotate(0deg);
+  transition: all 0.5s steps(100);
 }
 #faqs .drop-faqs .drop-ico img {
   width: 15px;
+}
+#faqs .drop-faqs .rotate {
+  transform: rotate(180deg);
 }
 #faqs .drop-faqs h4 {
   padding: 1.5rem 0;
@@ -456,9 +457,6 @@ footer .foot .social {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-  }
-  footer .foot .links ul {
-    flex-direction: column;
   }
   footer .foot .links ul li {
     padding: 0.4rem 0.25rem;
