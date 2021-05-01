@@ -35,7 +35,7 @@ sub {
 body {
   font-family: "Product Sans", sans-serif;
   color: white;
-  background-image: url("/img/stadia/landing.jpg");
+  background-image: url("https://www.gstatic.com/stadia/gamers/landing_page/assets/v2_static_hero-trimmed.jpg");
   background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
